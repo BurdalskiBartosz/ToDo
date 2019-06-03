@@ -3,51 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html,
 body {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: rgba(44, 44, 44, 0.726);
     font-family: Arial, Helvetica, sans-serif;
 }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .ToDo_container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 45vw;
-    min-height: 25vh;
     background-color: grey;
     border: 3px black solid;
     padding: 10px;
 }
-
 .container_form {
     display: flex;
-
     height: 40px;
 }
-
 .form_input {
-    /* width: 80%; */
     font-size: 20px;
     flex-grow: 3;
     height: 100%;
     outline: 0;
 }
-
 input:focus {
     outline: none;
 }
-
 .form_submit {
     flex-grow: 1;
     color: white;
@@ -55,35 +39,51 @@ input:focus {
     margin-left: 5px;
     border: 2px solid white;
 }
-
 ul {
     background-color: black;
     list-style: none;
     padding: 10px;
 }
-
 li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 30px;
-    height: 10%;
+    word-break: break-all;
     min-height: 30px;
     margin: 2px 0 2px 0;
     padding: 5px;
 }
-
+.inLi_Wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
 .fa-trash {
     margin-right: 10px;
     cursor: pointer;
 }
-
 .list-todo-todo li {
     background-color: red;
     border: 1px rgb(255, 123, 0) solid;
 }
-
 .list_done-done li {
     background-color: green;
     border: 1px greenyellow solid;
 }
+@media (max-width: 768px) {
+    .form_input {
+        font-size: 16px;
+       
+    }
+    li{
+        font-size: 20px;
+    }
+}
+@media (max-width: 1366px) {
+    .ToDo_container {
+        width: 70vw;
+    }
+} 
